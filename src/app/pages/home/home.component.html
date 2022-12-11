@@ -1,0 +1,53 @@
+<app-layout>
+  <div class="w-full flex flex-col">
+    <div class="relative">
+      <img
+        class="w-full h-[300px] md:h-[700px] z-0"
+        src="/assets/images/GL9A7583.jpeg"
+      />
+      <video
+        autoplay
+        loop
+        muted
+        class="absolute z-10 w-[70%] top-16 right-2 md:w-[50%] md:top-32 md:right-20"
+      >
+        <source
+          src="https://assets.mixkit.co/videos/preview/mixkit-set-of-plateaus-seen-from-the-heights-in-a-sunset-26070-large.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="h-full w-full">
+      <h1
+        class="mt-10 md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center"
+      >
+        KOMPOZYCJA PRAC NA WYKOŃCZENIE DOMU << pod klucz >>
+      </h1>
+
+      <ul
+        class="my-10 space-y-4 text-left text-gray-500 dark:text-gray-400 flex flex-wrap justify-center"
+      >
+        <li
+          class="flex items-center space-x-3 w-[90%] md:w-[45%]"
+          *ngFor="let list of lists"
+        >
+          <!-- Icon -->
+          <svg
+            class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          <span>{{ list }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</app-layout>
