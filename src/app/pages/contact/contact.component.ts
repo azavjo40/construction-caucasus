@@ -19,8 +19,9 @@ export class ContactComponent {
 
   public sendMessage() {
     if (!this.form.valid) return this.form.markAllAsTouched();
-    let message = `<b>Email: ${this.form.value?.email}</b>/n
-    <b>Message: ${this.form.value?.message}</b>
+    let message = `<b>Email: ${this.form.value?.email}</b>
+
+    <b>Cообщение: ${this.form.value?.message}</b>
     `;
     this.http
       .post(this.urlApi, {
