@@ -1,85 +1,89 @@
-<nav
-  class="flex items-center justify-between flex-wrap bg-teal-500 md:px-6 px-3 py-2"
->
-  <a
-    routerLink="/"
-    class="flex items-center flex-shrink-0 text-white mr-6 cursor-pointer"
+<div class="h-full">
+  <nav
+    class="flex items-center justify-between flex-wrap bg-teal-500 md:px-6 px-3 py-2"
   >
-    <img class="w-12 mr-5" src="assets/icons/logo.png" />
-    <span class="font-semibold text-xl tracking-tight">Budowlana Kaukaz</span>
-  </a>
-  <div class="block lg:hidden">
-    <button
-      (click)="isOpenMenu = !isOpenMenu"
-      class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white"
+    <a
+      routerLink="/"
+      class="flex items-center flex-shrink-0 text-white mr-6 cursor-pointer"
     >
-      <svg
-        class="fill-current h-3 w-3"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
+      <img class="w-12 mr-5" src="assets/icons/logo.png" />
+      <span class="font-semibold text-xl tracking-tight">Budowlana Kaukaz</span>
+    </a>
+    <div class="block lg:hidden">
+      <button
+        (click)="isOpenMenu = !isOpenMenu"
+        class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white"
       >
-        <title>Menu</title>
-        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-      </svg>
-    </button>
-  </div>
-  <div
-    [ngClass]="{
-      'hidden ': !isOpenMenu,
-      'block absolute top-16 left-0 z-50 pl-5': isOpenMenu
-    }"
-    class="w-full block flex-grow lg:flex lg:items-center lg:w-auto bg-teal-500"
-  >
+        <svg
+          class="fill-current h-3 w-3"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>Menu</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+        </svg>
+      </button>
+    </div>
     <div
-      class="text-sm lg:flex-grow md:items-center md:flex w-full pb-10 md:pb-0"
+      [ngClass]="{
+        'hidden ': !isOpenMenu,
+        'block absolute top-16 left-0 z-50 pl-5': isOpenMenu
+      }"
+      class="w-full block flex-grow lg:flex lg:items-center lg:w-auto bg-teal-500"
     >
-      <a
-        href="/"
-        class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+      <div
+        class="text-sm lg:flex-grow md:items-center md:flex w-full pb-10 md:pb-0"
       >
-        Dom
-      </a>
-      <a
-        routerLink="/contact"
-        class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
-      >
-        Napisz do nas
-      </a>
-      <div class="md:ml-auto flex md:items-center flex-col md:flex-row md:pr-6">
         <a
-          href="tel:+48739463214"
+          href="/"
           class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
         >
-          +48739463214
+          Dom
         </a>
         <a
-          *ngFor="let social of socialSite"
-          [href]="social?.url"
-          target="_blank"
-          class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white md:ml-8"
+          routerLink="/contact"
+          class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
         >
-          <img class="w-8 h-8 cursor-pointer" [src]="social?.image" />
+          Napisz do nas
         </a>
+        <div
+          class="md:ml-auto flex md:items-center flex-col md:flex-row md:pr-6"
+        >
+          <a
+            href="tel:+48739463214"
+            class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+          >
+            +48739463214
+          </a>
+          <a
+            *ngFor="let social of socialSite"
+            [href]="social?.url"
+            target="_blank"
+            class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white md:ml-8"
+          >
+            <img class="w-8 h-8 cursor-pointer" [src]="social?.image" />
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</nav>
-<ng-content></ng-content>
+  </nav>
+  <ng-content></ng-content>
 
-<footer class="p-4 bg-teal-500 rounded-t-lg shadow md:px-6 md:py-8">
-  <div class="sm:flex sm:items-center sm:justify-between">
-    <ul
-      class="flex flex-wrap items-center mb-6 text-sm text-teal-200 hover:text-white sm:mb-0"
-    >
-      <li class="mr-4 hover:underline md:mr-6 text-teal-200 hover:text-white">
-        Email: vazgaevyunadi@gmail.com
-      </li>
-      <li class="mr-4 hover:underline md:mr-6">Phone: +48739463214</li>
-      <li class="mr-4 hover:underline md:mr-6">Phone: +48666861106</li>
-    </ul>
-  </div>
-  <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8" />
-  <span class="block text-sm text-teal-200 hover:text-white"
-    >© 2021 - {{ year }} Budowlana Kaukaz.
-  </span>
-</footer>
+  <footer class="p-4 bg-teal-500 rounded-t-lg shadow md:px-6 md:py-8">
+    <div class="sm:flex sm:items-center sm:justify-between">
+      <ul
+        class="flex flex-wrap items-center mb-6 text-sm text-teal-200 hover:text-white sm:mb-0"
+      >
+        <li class="mr-4 hover:underline md:mr-6 text-teal-200 hover:text-white">
+          Email: vazgaevyunadi@gmail.com
+        </li>
+        <li class="mr-4 hover:underline md:mr-6">Phone: +48739463214</li>
+        <li class="mr-4 hover:underline md:mr-6">Phone: +48666861106</li>
+      </ul>
+    </div>
+    <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8" />
+    <span class="block text-sm text-teal-200 hover:text-white"
+      >© 2021 - {{ year }} Budowlana Kaukaz.
+    </span>
+  </footer>
+</div>
