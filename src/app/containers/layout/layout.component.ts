@@ -13,7 +13,10 @@ export class LayoutComponent {
       image: '/assets/icons/instagram.png',
       url: 'https://instagram.com/as_inter_bood?igshid=YmMyMTA2M2Y=',
     },
-    { image: '/assets/icons/telegram.png', url: '' },
+    {
+      image: '/assets/icons/telegram.png',
+      url: 'https://web.telegram.org/z/#1939629782',
+    },
     {
       image: '/assets/icons/whatsapp.png',
       url: 'https://wa.me/+48739463214',
