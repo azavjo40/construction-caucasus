@@ -10,7 +10,7 @@ export class HomeComponent {
     'Generalne sprzątanie wszystkich pomieszczeń i uruchomienie obiektu',
     'Końcowa kontrola systemów inżynierskich i uruchomienie',
     'Montaż elementów wystroju wnętrz (obrazy, instalacje, lustra itp.)',
-    'Расстановка мебели',
+    'Układ mebli',
     'Montaż paneli napowietrznych, przycisków, włączników w puszkach gniazdowych',
     'Montaż elementów oświetleniowych (żyrandole, kinkiety, lampy, oświetlenie wnętrz)',
     'Montaż gzymsów',
@@ -29,5 +29,10 @@ export class HomeComponent {
     'Przygotowanie ścian i podłóg do wykończenia',
     'Urządzenie do poziomowania jastrychu',
     'Zgrubne wyrównanie ścian i sufitów',
+  ];
+
+  public images = [
+    '/assets/images/GL9A7583.jpeg',
+    '/assets/images/320A2061_otd.jpg',
   ];
 }
