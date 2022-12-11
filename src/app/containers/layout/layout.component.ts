@@ -15,7 +15,7 @@ export class LayoutComponent {
     },
     {
       image: '/assets/icons/telegram.png',
-      url: 'https://web.telegram.org/z/#1939629782',
+      url: 'https://t.me/Abu_Saifullah01',
     },
     {
       image: '/assets/icons/whatsapp.png',
